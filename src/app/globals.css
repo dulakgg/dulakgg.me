@@ -1,22 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Chaos16';
+  src: url('/chaos16.woff2') format('woff2'),
+       url('/chaos16.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
+:root {
+  /* Core theme */
+  --background: #ffd6e8;
+  --foreground: #1b1b2f;
+  --text: #2b1b3f;
+
+  --primary: #6e7bff; 
+  --secondary: #b983ff;
+
+  /* Buttons & UI */
+  --button: linear-gradient(135deg, #6e7bff, #ff7abf);
+  --button-hover: linear-gradient(135deg, #ff7abf, #6e7bff);
+  --button-text: #ffffff;
+
+  /* Links */
+  --link: #6e7bff;
+  --visited-link: #a88bff;
+  --hover-link: #ff9fcf;
+
+  /* Accents */
+  --accent-pink: #ff8fcf;
+  --accent-blue: #7dd3ff;
+  --accent-glow: rgba(255, 122, 191, 0.5);
+
+  /* Borders & surfaces */
+  --border-soft: rgba(110, 123, 255, 0.25);
+  --surface: #fff0f7;
+  --surface-alt: #f3f4ff;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(255, 122, 191, 0.25);
+  --shadow-strong: 0 8px 30px rgba(110, 123, 255, 0.35);
+
+  /* Fun extras */
+  --gradient-main: linear-gradient(135deg, #ffd6e8, #dbe4ff);
+  --gradient-accent: linear-gradient(90deg, #ff7abf, #7dd3ff);
+  --glass-bg: rgba(255, 255, 255, 0.35);
+  --blur: blur(12px);
+
+  /* Fonts */
+  --font-chaos16: 'Chaos16', sans-serif;
+}
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-chaos16: var(--font-chaos16);
 }
 
 body {
