@@ -8,7 +8,7 @@ export default function Navbar() {
     const [dropdown, setDropdown] = useState(false);
     return (
         <nav id="navbar" className="gap-10 items-center sticky top-0 z-1000 flex border-b-3 border-border justify-between pb-3 pt-3 bg-background text-center">
-          <h1 className="ml-8 text-text text-[36px]"><a href="/">Dulakgg</a></h1>
+          <h1 className="ml-8 text-text text-[36px] font-bold"><a href="/">Dulakgg</a></h1>
           <motion.a
           initial={{ scale: 0 }} animate={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
