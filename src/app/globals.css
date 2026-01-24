@@ -1,68 +1,34 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Chaos16';
-  src: url('/chaos16.woff2') format('woff2'),
-       url('/chaos16.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  /* Core theme */
-  --background: #ffd6e8;
-  --foreground: #1b1b2f;
-  --text: #2b1b3f;
-
-  --primary: #6e7bff; 
-  --secondary: #b983ff;
-
-  /* Buttons & UI */
-  --button: linear-gradient(135deg, #6e7bff, #ff7abf);
-  --button-hover: linear-gradient(135deg, #ff7abf, #6e7bff);
-  --button-text: #ffffff;
-
-  /* Links */
-  --link: #6e7bff;
-  --visited-link: #a88bff;
-  --hover-link: #ff9fcf;
-
-  /* Accents */
-  --accent-pink: #ff8fcf;
-  --accent-blue: #7dd3ff;
-  --accent-glow: rgba(255, 122, 191, 0.5);
-
-  /* Borders & surfaces */
-  --border-soft: rgba(110, 123, 255, 0.25);
-  --surface: #fff0f7;
-  --surface-alt: #f3f4ff;
-
-  /* Shadows */
-  --shadow-soft: 0 4px 20px rgba(255, 122, 191, 0.25);
-  --shadow-strong: 0 8px 30px rgba(110, 123, 255, 0.35);
-
-  /* Fun extras */
-  --gradient-main: linear-gradient(135deg, #ffd6e8, #dbe4ff);
-  --gradient-accent: linear-gradient(90deg, #ff7abf, #7dd3ff);
-  --glass-bg: rgba(255, 255, 255, 0.35);
-  --blur: blur(12px);
-
-  /* Fonts */
-  --font-chaos16: 'Chaos16', sans-serif;
+  --background: oklch(0.96 0.085 306);
+  --bg-dark: oklch(0.92 0.085 306);
+  --text: oklch(0.15 0.17 306);
+  --text-muted: oklch(0.4 0.17 306);
+  --highlight: oklch(1 0.17 306);
+  --border: oklch(0.6 0.17 306);
+  --border-muted: oklch(0.7 0.17 306);
+  --primary: oklch(0.4 0.17 306);
+  --secondary: oklch(0.4 0.17 126);
+  --danger: oklch(0.5 0.17 30);
+  --warning: oklch(0.5 0.17 100);
+  --success: oklch(0.5 0.17 160);
+  --info: oklch(0.5 0.17 260);
 }
 
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-chaos16: var(--font-chaos16);
+  --color-footer: var(--bg-dark);
+  --color-text: var(--text);
+  --color-button: var(--primary);
+  --color-button-hover: var(--secondary);
+  --color-border: var(--border);
+  --color-border-muted: var(--border-muted);
+  --color-highlight: var(--highlight);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

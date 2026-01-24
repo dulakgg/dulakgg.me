@@ -1,25 +1,26 @@
-import Image from "next/image";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import { FaGamepad, FaCode, FaGlobe, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <nav className="flex items-center justify-center" >
-        <h1 className="font-chaos16 text-9xl text-[#3a1435]  drop-shadow-lg text-center"><a href="/">Dulakgg</a></h1>
-      </nav>
-      <main>
-        <section className="mt-8 text-center">
-          <p className="text-lg mb-4">This page is currently being made :)</p>
-          <p className="text-lg mb-4">I pay for this domain, so consider supporting me!</p>
-          <a 
-            href="https://ko-fi.com/dulakgg" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-[#FF5E5B] hover:bg-[#ff4744] text-white font-bold py-3 px-6 rounded-lg transition-colors"
-          >
-            ☕ Support me on Ko-fi
-          </a>
-        </section>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1 flex flex-col items-center justify-center px-4 py-12">
+        <div className="max-w-2xl text-center mb-12">
+          <h1 className="text-text text-4xl md:text-5xl font-bold mb-4">
+            Hi, I’m Dulak
+          </h1>
+          <p className="text-text text-lg md:text-xl leading-relaxed mb-6">
+            I’m a developer from Poland who builds Geometry Dash mods, websites, and
+      the occasional Unity game. I love turning ideas into real, working projects.
+          </p>
+          <p className="text-text opacity-75">
+            Want to work together or need help? You can reach out to me on Discord or the contact page.
+          </p>
+        </div>
       </main>
+      <Footer />
     </div>
   );
 }
