@@ -14,6 +14,7 @@ type Props = {
     gdVersion: string,
     wIP?: boolean,
     superseded?: boolean
+    linkGeode2?: string
 }
 
 export default function ModTIle({ 
@@ -28,6 +29,7 @@ unreleased,
 gdVersion,
 wIP,
 superseded,
+linkGeode2,
 }: Props) {
   return (
     <li className="text-center border-border border-5 rounded-xl p-3 w-100 mb-10">
@@ -81,6 +83,18 @@ superseded,
                         <Image
                             src="https://github.com/geode-sdk/docs/blob/main/assets/geode-circle.png?raw=true" 
                             alt="Geode Icon"
+                            width={48} 
+                            height={48} 
+                        />
+                    </Link>
+                }
+            </li>
+            <li>
+                {linkGeode2 && 
+                    <Link href={linkGeode2}>
+                        <Image
+                            src="https://github.com/geode-sdk/docs/blob/main/assets/geode-circle.png?raw=true" 
+                            alt="Geode Icon v2"
                             width={48} 
                             height={48} 
                         />

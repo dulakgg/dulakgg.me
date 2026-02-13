@@ -67,6 +67,7 @@ export default function Support() {
               gdVersion="2.2074"
               linkGeode="https://geode-sdk.org/mods/dulak.denabler"
               superseded
+              linkGeode2="https://geode-sdk.org/mods/bluetoadmaker.modprofiles"
             />
             <ModTIle 
               icon="https://github.com/dulakgg/Auto-Be-Gone-Fix/blob/main/logo.png?raw=true"
