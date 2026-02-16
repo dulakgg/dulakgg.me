@@ -1,3 +1,4 @@
+'use client';
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { FaGamepad, FaCode, FaGlobe, FaEnvelope } from "react-icons/fa";

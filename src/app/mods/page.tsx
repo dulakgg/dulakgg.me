@@ -17,7 +17,7 @@ export default function Support() {
               linkGitHub="https://github.com/dulakgg/HELL-integration"
               unreleased
               unfinished
-              gdVersion="2.2074"
+              gdVersion="2.2081"
             />
             <ModTIle
               icon="https://github.com/dulakgg/List-Counter/blob/main/logo.png?raw=true"
@@ -25,7 +25,7 @@ export default function Support() {
               desc="Counts in how many lists a level is in"
               alt="List Counter Icon"
               linkGitHub="https://github.com/dulakgg/List-Counter"
-              gdVersion="2.2074"
+              gdVersion="2.2081"
               linkGeode="https://geode-sdk.org/mods/dulak.list_counter"
               wIP
               unfinished
@@ -36,7 +36,7 @@ export default function Support() {
               desc="Wraith codes tracker"
               alt="Wraith Helper Icon"
               linkGitHub="https://github.com/dulakgg/Wraith-codes"
-              gdVersion="2.2074"
+              gdVersion="2.2081"
               linkGeode="https://geode-sdk.org/mods/dulak.wraith-help"
               unfinished
             />
@@ -46,7 +46,7 @@ export default function Support() {
               desc="Prevents accidental level exits"
               alt="Lock In Icon"
               linkGitHub="https://github.com/dulakgg/Lock-In"
-              gdVersion="2.2074"
+              gdVersion="2.2081"
               linkGeode="https://geode-sdk.org/mods/dulak.lock_in"
             />
             <ModTIle 
@@ -55,7 +55,7 @@ export default function Support() {
               desc="Force all levels to open a chosen Level ID"
               alt="Active Choice Limiter Icon"
               linkGitHub="https://github.com/dulakgg/Active-Choice-Limiter"
-              gdVersion="2.2074"
+              gdVersion="2.2081"
               linkGeode="https://geode-sdk.org/mods/dulak.active_choice_limiter"
             />
             <ModTIle 
@@ -64,7 +64,7 @@ export default function Support() {
               desc="Bulk enable/disable all mods at once"
               alt="Denabler Icon"
               linkGitHub="https://github.com/dulakgg/Denabler"
-              gdVersion="2.2074"
+              gdVersion="2.2081"
               linkGeode="https://geode-sdk.org/mods/dulak.denabler"
               superseded
               linkGeode2="https://geode-sdk.org/mods/bluetoadmaker.modprofiles"
@@ -75,7 +75,7 @@ export default function Support() {
               desc="Filters out auto levels from easy searches"
               alt="Auto Be Gone Fix Icon"
               linkGitHub="https://github.com/dulakgg/Auto-Be-Gone-Fix"
-              gdVersion="2.2074"
+              gdVersion="2.2081"
               linkGeode="https://geode-sdk.org/mods/dulak.auto_be_gone_fix"
             />
         </ul>
