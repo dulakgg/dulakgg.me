@@ -10,6 +10,7 @@ const sourGummy = Sour_Gummy({
 
 export const metadata: Metadata = {
   title: "Dulakgg",
+  description: "Dulak - developer building Geometry Dash mods, websites and games. Check out my mods, support me or get in touch.",
 };
 
 export default function RootLayout({
@@ -18,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `
           try {

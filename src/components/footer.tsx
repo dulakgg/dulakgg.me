@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="bg-footer border-t-3 border-border-muted px-4 md:px-8 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-8">
           <div>
-            <h3 className="text-text font-bold mb-3 text-center md:text-left">Socials</h3>
+            <h2 className="text-text font-bold mb-3 text-center md:text-left">Socials</h2>
             <ul className="flex flex-col gap-2 text-text">
               <li><DiscordCopy /></li>
               <li>
@@ -23,7 +23,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-text font-bold mb-3 text-center md:text-left">Built With</h3>
+            <h2 className="text-text font-bold mb-3 text-center md:text-left">Built With</h2>
             <ul className="flex flex-col gap-2 text-text">
               <li className="flex items-center"><RiNextjsFill /> Next.js</li>
               <li className="flex items-center"><RiTailwindCssFill /> Tailwind</li>

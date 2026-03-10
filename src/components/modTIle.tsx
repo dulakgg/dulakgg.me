@@ -43,7 +43,7 @@ linkGeode2,
             />
         </div>
         <h2 className="text-3xl">{title}</h2>
-        <h3 className="text-xl">{desc}</h3>
+        <p className="text-xl">{desc}</p>
         <div className="flex justify-center gap-3 flex-wrap">
             <div className="border-2 rounded-full pl-3 pr-3 mt-2 mb-2 bg-sky-400">
                 <p className="text-lg">{gdVersion}</p>
