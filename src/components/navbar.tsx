@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion } from "motion/react"
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Navbar() {
     const [dropdown, setDropdown] = useState(false);
@@ -24,6 +25,9 @@ export default function Navbar() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           href="/contact" className='mr-8 hidden content-center-safe lg:block bg-button hover:bg-button-hover rounded p-4 text-highlight'>Contact Me</motion.a>
+          <div className="hidden lg:flex mr-6">
+            <ThemeSwitcher />
+          </div>
           <motion.button 
           initial={{ scale: 0 }} animate={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
@@ -36,6 +40,9 @@ export default function Navbar() {
               <a href="/mods" className='text-highlight mb-3 p-2 w-75 bg-button hover:bg-button-hover rounded'>My mods</a>
               <a href="/support" className='text-highlight mb-3 w-75 p-2 bg-button hover:bg-button-hover rounded'>Support Me</a>
               <a href="/contact" className='text-highlight mb-3 w-75 p-2 bg-button hover:bg-button-hover rounded'>Contact Me</a>
+              <div className="mb-1 flex justify-center w-full">
+                <ThemeSwitcher />
+              </div>
             </div>
           )}
       </nav>

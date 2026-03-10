@@ -19,6 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          try {
+            var t = localStorage.getItem('theme');
+            if (t && t !== 'blue') document.documentElement.setAttribute('data-theme', t);
+          } catch(e) {}
+        ` }} />
+      </head>
       <body
         className={sourGummy.className}
       >

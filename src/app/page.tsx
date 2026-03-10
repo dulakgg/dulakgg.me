@@ -13,8 +13,8 @@ export default function Home() {
             Hi, I’m Dulak
           </h1>
           <p className="text-text text-lg md:text-xl leading-relaxed mb-6">
-            I’m a developer from Poland who builds Geometry Dash mods, websites, and
-      the occasional Unity game. I love turning ideas into real, working projects.
+            I’m a developer who builds Game mods, websites, and
+      the occasional games. I’m passionate about creating fun and useful tools for the GD community, and I’m always looking for new projects to work on.
           </p>
           <p className="text-text opacity-75">
             Want to work together or need help? You can reach out to me on Discord or the contact page.

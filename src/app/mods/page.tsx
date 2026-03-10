@@ -38,7 +38,6 @@ export default function Support() {
               linkGitHub="https://github.com/dulakgg/Wraith-codes"
               gdVersion="2.2081"
               linkGeode="https://geode-sdk.org/mods/dulak.wraith-help"
-              unfinished
             />
             <ModTIle 
               icon="https://github.com/dulakgg/Lock-In/blob/main/logo.png?raw=true"
