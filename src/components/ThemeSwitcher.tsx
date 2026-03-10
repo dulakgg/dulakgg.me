@@ -40,6 +40,8 @@ export default function ThemeSwitcher() {
           key={t.value}
           onClick={() => handleTheme(t.value)}
           title={t.label}
+          aria-label={`Switch to ${t.label} theme`}
+          aria-pressed={theme === t.value}
           style={{ background: t.color }}
           className={`w-5 h-5 rounded-full border-2 transition-transform hover:scale-125 cursor-pointer ${
             theme === t.value
