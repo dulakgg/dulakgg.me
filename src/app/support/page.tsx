@@ -6,7 +6,7 @@ export default function Support() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 flex items-center justify-center px-4">
+      <main className="flex-1 flex items-center justify-center px-4 mt-10">
         <div className="max-w-md text-center">
           <div className="text-6xl mb-6 flex justify-center">
             <FaHeart className="text-button" />
@@ -19,10 +19,18 @@ export default function Support() {
             href="https://ko-fi.com/dulakgg"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-button hover:bg-button-hover text-highlight px-6 py-3 rounded-lg text-lg font-medium transition-colors"
+            className="inline-flex mb-10 items-center pt-7 gap-2 bg-button hover:bg-button-hover text-highlight px-6 py-3 rounded-lg text-lg font-medium transition-colors"
           >
-            <FaCoffee />
-            Support on Ko-fi
+            <div className="mb-4">
+              <iframe
+                id="kofiframe"
+                src="https://ko-fi.com/dulakgg/?hidefeed=true&widget=true&embed=true&preview=true"
+                style={{ border: "none", width: "100%", padding: "4px", background: "#f9f9f9" }}
+                height={712}
+                title="dulakgg"
+              />
+            </div>
+            <span className="sr-only">External link to Ko-fi</span>
           </a>
         </div>
       </main>
