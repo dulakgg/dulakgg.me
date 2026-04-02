@@ -19,6 +19,11 @@ export default function Navbar() {
           initial={{ scale: 0 }} animate={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+          href="/websites" className='hidden content-center-safe lg:block bg-button hover:bg-button-hover rounded p-4 text-highlight'>Websites</motion.a>
+          <motion.a
+          initial={{ scale: 0 }} animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
           href="/support" className='hidden content-center-safe lg:block bg-button hover:bg-button-hover rounded p-4 text-highlight'>Support Me</motion.a>
           <motion.a
           initial={{ scale: 0 }} animate={{ scale: 1 }}
@@ -42,6 +47,7 @@ export default function Navbar() {
           {dropdown && (
             <div id="mobile-menu" className="lg:hidden justify-center flex-wrap text-center border-3 border-border bg-background p-2 h-auto absolute top-full right-5 mt-2 w-[50%] shadow-lg rounded-md transition-all duration-300 ease-in-out z-50 flex">
               <a href="/mods" className='text-highlight mb-3 p-2 w-75 bg-button hover:bg-button-hover rounded'>My mods</a>
+              <a href="/websites" className='text-highlight mb-3 w-75 p-2 bg-button hover:bg-button-hover rounded'>Websites</a>
               <a href="/support" className='text-highlight mb-3 w-75 p-2 bg-button hover:bg-button-hover rounded'>Support Me</a>
               <a href="/contact" className='text-highlight mb-3 w-75 p-2 bg-button hover:bg-button-hover rounded'>Contact Me</a>
               <div className="mb-1 flex justify-center w-full">
