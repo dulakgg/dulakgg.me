@@ -31,7 +31,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="text-text flex items-center gap-1 text-center">
-            <span className="text-sm md:text-base">idk what to put here actually</span> <FaHeart className="text-button size-4" /> 
+            <span className="text-sm md:text-base">join my discord server <a href="https://discord.gg/CQFyRJDP5y" className="hover:text-button bg-white transition-colors">here</a></span> <FaHeart className="text-button size-4" /> 
           </div>
         </div>
       </footer>
