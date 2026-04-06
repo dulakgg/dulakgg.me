@@ -77,6 +77,15 @@ export default function Support() {
               gdVersion="2.2081"
               linkGeode="https://geode-sdk.org/mods/dulak.auto_be_gone_fix"
             />
+            <ModTIle 
+              icon="https://github.com/dulakgg/Who-Added-This/raw/main/logo.png"
+              title="Who Added This"
+              desc="Shift+click any button to see its origin."
+              alt="Who Added This Icon"
+              linkGitHub="https://github.com/dulakgg/Who-Added-This"
+              gdVersion="2.2081"
+              linkGeode="https://geode-sdk.org/mods/dulak.whoaddedthis"
+            />
         </ul>
       </main>
       <Footer />
