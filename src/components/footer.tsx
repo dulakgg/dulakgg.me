@@ -45,7 +45,7 @@ export default function Footer() {
             </a>
             
             <a 
-              href="https://www.youtube.com/@Dulakggyy" 
+              href="https://www.youtube.com/@dulakgg" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center justify-center md:justify-start gap-3 bg-background border-4 border-border rounded-xl px-5 py-3 font-bold text-text hover:bg-button hover:text-highlight shadow-[4px_4px_0px_var(--color-border)] transition-all hover:-translate-y-1"
