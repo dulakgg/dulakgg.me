@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, type Variants } from 'framer-motion';
 import { IoMdClose } from 'react-icons/io';
 import { IoMenu } from 'react-icons/io5';
 
@@ -37,7 +37,7 @@ export default function Navbar() {
       opacity: 1,
       transition: { staggerChildren: 0.15, delayChildren: 0.3 }
     }
-  };
+  } as const satisfies Variants;
 
   const itemVariants = {
     hidden: { opacity: 0, y: -20, scale: 0.8 },
@@ -47,7 +47,7 @@ export default function Navbar() {
       scale: 1,
       transition: { type: "spring", stiffness: 300, damping: 20 }
     }
-  };
+  } as const satisfies Variants;
 
   return (
     <div 
