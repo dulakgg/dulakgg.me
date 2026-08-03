@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaCheck } from "react-icons/fa";
 
 export default function DiscordCopy() {
   const [copied, setCopied] = useState(false);
@@ -15,15 +15,11 @@ export default function DiscordCopy() {
   return (
     <button
       onClick={handleCopy}
-      className="flex items-center gap-2 hover:text-button transition-colors relative cursor-pointer"
+      type="button"
+      className="w-full flex items-center justify-center md:justify-start gap-3 bg-background border-4 border-border rounded-xl px-5 py-3 font-bold text-text hover:bg-button hover:text-highlight shadow-[4px_4px_0px_var(--color-border)] transition-all hover:-translate-y-1 active:translate-y-0 cursor-pointer relative"
     >
-      <FaDiscord />
-      <span>Discord</span>
-      {copied && (
-        <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-text text-background text-sm px-2 py-1 rounded whitespace-nowrap">
-          Copied!
-        </span>
-      )}
+      {copied ? <FaCheck className="text-xl text-success" /> : <FaDiscord className="text-2xl" />}
+      <span>{copied ? "Copied @dulakgg" : "Copy Discord Username"}</span>
     </button>
   );
 }

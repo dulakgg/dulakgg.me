@@ -1,118 +1,106 @@
-'use client'
+'use client';
 
-import React, { useState } from "react";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaPaperPlane } from 'react-icons/fa';
 
-// contact form template i only changed the style
-export function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+export default function ContactForm() {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(false);
-    setError(null);
-    setLoading(true);
-    const form = e.currentTarget;
-    const nameInput = form.elements.namedItem("name") as HTMLInputElement;
-    const emailInput = form.elements.namedItem("email") as HTMLInputElement;
-    const messageInput = form.elements.namedItem("message") as HTMLTextAreaElement;
+    setStatus('loading');
+    
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "d2dc59ae-8855-4afc-a6f0-f51cdff37e5c",
-          name: nameInput.value,
-          email: emailInput.value,
-          message: messageInput.value,
-        }),
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       });
 
-      const result = await response.json();
-
-      if (result.success) {
-        form.reset();
-        setSubmitted(true);
+      if (res.ok) {
+        setStatus('success');
+        (e.target as HTMLFormElement).reset();
       } else {
-        setError(result.message || "Submission failed. Please try again.");
+        setStatus('error');
       }
-    } catch {
-      setError("An error occurred. Please try again.");
-    } finally {
-      setLoading(false);
+    } catch (error) {
+      setStatus('error');
     }
-  }
+  };
 
   return (
-    <div className="flex justify-center items-center min-h-[60vh] bg-background py-8">
-      <div className="w-full max-w-md">
-        {submitted && (
-          <div className="mb-4 text-center text-success bg-success/10 border border-success rounded-lg py-2 font-semibold">
-            Submitted successfully!
-          </div>
-        )}
-        {error && (
-          <div className="mb-4 text-center text-danger bg-danger/10 border border-danger rounded-lg py-2 font-semibold">
-            {error}
-          </div>
-        )}
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="w-full max-w-xl mx-auto rounded-2xl border-4 border-border bg-footer p-8 shadow-[8px_8px_0px_var(--color-border)]"
+    >
+      <h2 className="font-(family-name:--font-sour-gummy) text-3xl font-extrabold mb-6 text-text">
+        Send me a message
+      </h2>
 
-        <form
-          onSubmit={handleSubmit}
-          className="bg-footer rounded-xl shadow-lg p-8 border border-border"
-          style={{ boxShadow: '0 4px 24px 0 var(--border-muted)' }}
-        >
-          <h2 className="text-2xl font-bold mb-6 text-text text-center">
-            Contact Me
-          </h2>
-
-          <div className="mb-4">
-            <label className="block text-text font-medium mb-1">Name</label>
-            <input
-              type="text"
-              name="name"
+      {status === 'success' ? (
+        <div className="bg-success/20 border-2 border-success text-success p-4 rounded-xl font-bold text-center">
+          Message sent! I'll get back to you soon.
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block font-bold mb-2 text-text">Name</label>
+            <input 
               required
-              placeholder="Your name"
-              className="w-full px-4 py-2 rounded-lg border border-border-muted bg-background text-text focus:outline-none focus:border-button transition"
+              type="text" 
+              name="name" 
+              id="name"
+              placeholder="Your name or alias"
+              className="w-full px-4 py-3 rounded-xl border-3 border-border bg-background text-text focus:outline-none focus:ring-4 focus:ring-button/20 transition-all"
             />
           </div>
 
-          <div className="mb-4">
-            <label className="block text-text font-medium mb-1">Email</label>
-            <input
-              type="email"
-              name="email"
+          <div>
+            <label htmlFor="contact" className="block font-bold mb-2 text-text">Discord Tag / Email</label>
+            <input 
               required
-              placeholder="email@example.com"
-              className="w-full px-4 py-2 rounded-lg border border-border-muted bg-background text-text focus:outline-none focus:border-button transition"
+              type="text" 
+              name="contact" 
+              id="contact"
+              placeholder="How can I reach you?"
+              className="w-full px-4 py-3 rounded-xl border-3 border-border bg-background text-text focus:outline-none focus:ring-4 focus:ring-button/20 transition-all"
             />
           </div>
 
-          <div className="mb-6">
-            <label className="block text-text font-medium mb-1">Message</label>
-            <textarea
-              name="message"
+          <div>
+            <label htmlFor="message" className="block font-bold mb-2 text-text">Message</label>
+            <textarea 
               required
+              name="message" 
+              id="message"
               rows={4}
-              placeholder="Enter Message"
-              className="w-full px-4 py-2 rounded-lg border border-border-muted bg-background text-text focus:outline-none focus:border-button transition resize-none"
-            />
+              placeholder="What are we building?"
+              className="w-full px-4 py-3 rounded-xl border-3 border-border bg-background text-text focus:outline-none focus:ring-4 focus:ring-button/20 transition-all resize-y"
+            ></textarea>
           </div>
 
-          <button
+          {status === 'error' && (
+            <p className="text-red-500 font-bold text-sm">Something went wrong. Please try again.</p>
+          )}
+
+          <motion.button 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            disabled={status === 'loading'}
             type="submit"
-            disabled={loading}
-            className="w-full py-2 rounded-lg bg-button text-white font-semibold hover:bg-button-hover transition-colors shadow-md disabled:opacity-60"
+            className="w-full mt-4 font-(family-name:--font-sour-gummy) text-xl font-bold px-8 py-4 rounded-xl bg-button text-highlight hover:bg-button-hover border-4 border-border shadow-[4px_4px_0px_var(--color-border)] transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            {loading ? "Submitting..." : "Submit Form"}
-          </button>
+            {status === 'loading' ? 'Sending...' : (
+              <><FaPaperPlane /> Send Message</>
+            )}
+          </motion.button>
         </form>
-      </div>
-    </div>
+      )}
+    </motion.div>
   );
 }

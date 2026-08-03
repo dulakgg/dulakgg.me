@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Sour_Gummy } from 'next/font/google'
-import './globals.css'
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Sour_Gummy } from 'next/font/google';
+import localFont from 'next/font/local';
+import './globals.css';
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 
 const sourGummy = Sour_Gummy({
   subsets: ['latin'],
-})
+  variable: '--font-sour-gummy', 
+});
+
+
+const myCustomFont = localFont({
+  src: "../../public/BaconyScript.otf", 
+  display: 'swap',
+  variable: '--font-custom-otf', 
+});
 
 export const metadata: Metadata = {
   title: "Dulakgg",
@@ -28,9 +38,7 @@ export default function RootLayout({
           } catch(e) {}
         ` }} />
       </head>
-      <body
-        className={sourGummy.className}
-      >
+      <body className={`${sourGummy.variable} ${myCustomFont.variable} antialiased`}>
         {children}
         <Analytics />
         <SpeedInsights />
