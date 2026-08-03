@@ -262,7 +262,7 @@ export default function Home() {
                   Global Stats Viewer
                 </h3>
                 <p className="text-text/80 text-base md:text-lg font-medium leading-relaxed">
-                  An interactive stats viewer and global ranking system for rated Geometry Dash levels.
+                  Expands upon the idea of a stats viewer by creating a ranking system that takes all of your accomplishments in rated Geometry Dash levels.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

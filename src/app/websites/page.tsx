@@ -21,7 +21,7 @@ const websites: WebsiteProject[] = [
     url: "https://globalstatsviewer.com",
     githubUrl: "https://github.com/Global-Stats-Viewer",
     image: "/gsv.png",
-    description: "An interactive stats viewer and global ranking system tracking accomplishments across all rated Geometry Dash levels.",
+    description: "Expands upon the idea of a stats viewer by creating a ranking system that takes all of your accomplishments in rated Geometry Dash levels.",
     tag: "Stats Platform"
   },
   {
@@ -29,29 +29,29 @@ const websites: WebsiteProject[] = [
     url: "https://ninecirclesdemonlist.com",
     githubUrl: "https://github.com/Nine-Circles-Demonlist",
     image: "/ncdl.png",
-    description: "The go-to community ranking platform and record tracker for every single Nine Circles demon level.",
+    description: "The go-to community ranking platform and record tracker for every single Nine Circles demon demon.",
     tag: "Demon List"
   },
   {
     name: "The Shitty List",
     githubUrl: "https://github.com/TheShittyList",
     image: null,
-    description: "Community ranking and record archival dedicated to the iconic 'Shitty' level series and layouts.",
+    description: "Community ranking dedicated to the iconic 'Shitty' level series and layouts.",
     tag: "Demon List"
   },
   {
     name: "Top Towers Community",
     githubUrl: "https://github.com/Top-Towers-Community",
     image: null,
-    description: "Community hub and ranking system for the hardest tower & platformer levels in Geometry Dash 2.2.",
-    tag: "Platformer List"
+    description: "Top Roblox towers",
+    tag: "List"
   },
   {
     name: "Extreme Demon Index",
     githubUrl: "https://github.com/Extreme-Demon-Index",
     image: null,
-    description: "A comprehensive index cataloging Extreme Demons, player records, and difficulty progression.",
-    tag: "Demon Index"
+    description: "EDI",
+    tag: "List"
   }
 ];
 
